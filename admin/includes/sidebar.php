@@ -5,7 +5,7 @@
                     </li>
                     <li>
                         <a href="users.php"><i class="fa fa-fw fa-bar-chart-o"></i> Users</a>
-                    </li>
+                    </li>w
                     <li>
                         <a href="upload.php"><i class="fa fa-fw fa-table"></i> Upload</a>
                     </li>
