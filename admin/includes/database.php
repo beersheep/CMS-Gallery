@@ -21,18 +21,26 @@ class Database {
 			die("Database connection failed" . mysqli_error());
 		}
 
+	}
+
 	public function query($sql){
 
 		$result = mysqli_query($this->connection, $sql);
-		if(!$result){
-			die("Query failed");
-		}
-
-		return $result
+		return $result;
 
 	}
 
-	
+	private function confirm_query($result){
+		if(!$result){
+			die("Query failed");
+		}
+	}
+
+	public function escape_string($string){
+
+		$escape_string = mysqli_real_escape_string($this->connection, $string);
+		return $escape_string;
+
 	}
 
 	}
