@@ -4,7 +4,13 @@ require_once("db_connect.php");
 
 class Database {
 
-	Private $connection;
+
+
+	public $connection;
+
+		function __construct(){
+			$this->open_db_connection();
+	}	
 
 	public function open_db_connection() {
 
@@ -15,12 +21,15 @@ class Database {
 			die("Database connection failed" . mysqli_error());
 		}
 
+	
+
+	
 	}
 
 	}
 
 $database = New Database();
-$database->open_db_connection();
+
 
 
 
