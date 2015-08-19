@@ -16,8 +16,8 @@
 
                         #Test query($sql) 
 
-                        $user = new User();
-                        $result_set = $user->find_all_users();
+                        
+                        $result_set = User::find_users_by_id(2);
                             
                         while ($row = mysqli_fetch_array($result_set)) {
 
