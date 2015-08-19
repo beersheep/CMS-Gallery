@@ -16,21 +16,26 @@
 
                         #Test query($sql) 
 
-                        
-                    //     $result_set = User::find_all_users();
-                            
-                    //         foreach ($result_set AS $result){
-
-                    //         echo $result["username"]."<br/>";
-                    // }
-                        
-
                         $found_user = User::find_users_by_id(2);
 
-                        $user = User::instantiation($found_user);
+                        echo $found_user->last_name;
+                    
+                        $pictures = new picture();
+                        
 
-                        echo $user->first_name;
+                        // $found_user = User::find_users_by_id(2);
 
+                        // $user = User::instantiation($found_user);
+
+                        // echo $user->first_name;
+
+                        // $users = User::find_all_users();
+
+                        // foreach ($users as $user) {
+                            
+                        //     echo $user->first_name;
+                        //     echo "<br />";
+                        // }
 
                          ?>
 

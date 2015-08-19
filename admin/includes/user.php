@@ -2,10 +2,10 @@
 
 class User{
 
-	private $id;
-	private $username;
-	private $first_name;
-	private$last_name;
+	public $id;
+	public $username;
+	public $first_name;
+	public $last_name;
 
 
 	public static function find_all_users(){
@@ -17,16 +17,24 @@ class User{
 
 	public static function find_users_by_id($id){
 
-		$result_set = self::find_query("SELECT * FROM users Where id = $id LIMIT 1");
-		$found_user = mysqli_fetch_array($result_set);
-		return $found_user;
+		$result_array = self::find_query("SELECT * FROM users Where id = $id LIMIT 1");
+
+		return !empty($result_array) ? array_shift($result_array) : false ;
 	}
+
 
 	public static function find_query($sql){
 
 		global $database;
 		$result_set = $database->query($sql);
-		return $result_set;
+		$object_array = array();
+		while($row = mysqli_fetch_array($result_set)){
+
+			$object_array[] = self::instantiation($row);
+		}
+
+
+		return $object_array;
 	}
 
 	public static function instantiation($user_record){
@@ -43,13 +51,21 @@ class User{
 
 	 		if($object->has_the_attribute($attribute)) {
 
-	 			$object->attribute = $value;
+	 			$object->$attribute = $value;
 	 		}
 
 	 	}
 
 	 	return $object;
 
+	}	
+
+	private function has_the_attribute($attribute){
+
+		$object_properties = get_object_vars($this);
+
+		return array_key_exists($attribute, $object_properties);
+		// to check if the db attribute match the class properties
 
 	}
 
