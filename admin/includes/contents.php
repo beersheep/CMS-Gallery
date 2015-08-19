@@ -27,13 +27,7 @@
 
                         $found_user = User::find_users_by_id(2);
 
-                        $user = new User();
-
-                        $user->id = $found_user['id'];
-                        $user->username = $found_user['username'];
-                        $user->first_name = $found_user['first_name'];
-                        $user->last_name = $found_user['last_name'];
-
+                        $user = User::instantiation($found_user);
 
                         echo $user->first_name;
 

@@ -23,13 +23,27 @@ class User{
 		return $found_user;
 	}
 
-	private static function find_query($sql){
+	public static function find_query($sql){
 
 		global $database;
 		$result_set = $database->query($sql);
 		return $result_set;
 	}
 
+	public static function instantiation($found_user){
+
+		#becuase it's in the User class, so use self to sub
+		$object = new self;
+
+        $object->id = $found_user['id'];
+		$object->username = $found_user['username'];
+		$object->first_name = $found_user['first_name'];           
+	 	$object->last_name = $found_user['last_name'];
+
+	 	return $object;
+
+
+	}
 
 }
 
