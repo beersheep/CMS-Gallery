@@ -2,11 +2,10 @@
 
 class User{
 
-	public $id;
-	public $username;
-	public $password;
-	public $first_name;
-	public $last_name;
+	private $id;
+	private $username;
+	private $first_name;
+	private$last_name;
 
 
 	public static function find_all_users(){
@@ -30,15 +29,24 @@ class User{
 		return $result_set;
 	}
 
-	public static function instantiation($found_user){
+	public static function instantiation($user_record){
 
 		#becuase it's in the User class, so use self to sub
 		$object = new self;
 
-        $object->id = $found_user['id'];
-		$object->username = $found_user['username'];
-		$object->first_name = $found_user['first_name'];           
-	 	$object->last_name = $found_user['last_name'];
+     	// $object->id = $found_user['id'];
+		// $object->username = $found_user['username'];
+		// $object->first_name = $found_user['first_name'];           
+	 	// $object->last_name = $found_user['last_name'];
+
+	 	foreach ($user_record as $attribute => $value) {
+
+	 		if($object->has_the_attribute($attribute)) {
+
+	 			$object->attribute = $value;
+	 		}
+
+	 	}
 
 	 	return $object;
 
