@@ -17,14 +17,17 @@
                         #Test query($sql) 
 
                         
-                        $result_set = User::find_users_by_id(2);
+                    //     $result_set = User::find_all_users();
                             
-                        while ($row = mysqli_fetch_array($result_set)) {
+                    //         foreach ($result_set AS $result){
 
-                            echo $row['username']."<br >";
+                    //         echo $result["username"]."<br/>";
+                    // }
+                        
 
-                        }
+                        $found_user = User::find_users_by_id(3);
 
+                            echo $found_user['first_name'];
 
 
                          ?>
