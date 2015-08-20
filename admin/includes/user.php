@@ -10,15 +10,12 @@ class User{
 
 	public static function find_all_users(){
 
-
 		return self::find_query("SELECT * FROM users");
-		
 	}
 
 	public static function find_users_by_id($id){
 
 		$result_array = self::find_query("SELECT * FROM users Where id = $id LIMIT 1");
-
 		return !empty($result_array) ? array_shift($result_array) : false ;
 	}
 

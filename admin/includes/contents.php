@@ -20,8 +20,7 @@
 
                         echo $found_user->last_name;
                     
-                        $pictures = new picture();
-                        
+                    
 
                         // $found_user = User::find_users_by_id(2);
 
