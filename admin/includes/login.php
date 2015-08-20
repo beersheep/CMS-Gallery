@@ -9,7 +9,11 @@
 		$username = trim($_POST['username']); 
 		$password = trim($_POST['password']);
 
-		# Method to check database user
+		# Method to check database user ** Super important Lecture 54:verify method
+
+	$found_user = User::verify_user($username, $password);
+
+
 
 	if($user_found) {
 
