@@ -12,9 +12,14 @@ if(file_exists($path)){
 
 } else {
 	die("No {$classes}.php found.");	
-}
+	}
 
 }
 
+function redirect($location){
+   
+   header("Location: $location");
+
+}
 
  ?>
