@@ -14,27 +14,47 @@
 
                         <?php
 
-                        #Test query($sql) 
+                        echo SITE_ROOT;
 
-                        $found_user = User::find_users_by_id(2);
+                        // $user = User::find_by_id(21);
+                        // echo $user->username;
 
-                        echo $found_user->last_name;
-                    
-                    
+                        // $user->first_name = "Cookie";
+                        // $user->last_name = "Huang";
 
-                        // $found_user = User::find_users_by_id(2);
+                        // $user->save();
+                        
+                        // $user->username = "CookieHuang";
+                        // $user->password = "1234";
+                        // $user->first_name = "Cookie";
+                        // $user->last_name = "Huang";
 
-                        // $user = User::instantiation($found_user);
+                        // $user->save();
 
-                        // echo $user->first_name;
+                        // $photo = new photo;
+                        // $photo->title = "I love cats";
+                        // $photo->description = "All cats around us";
 
-                        // $users = User::find_all_users();
+                        // $photo->save();
 
-                        // foreach ($users as $user) {
-                            
-                        //     echo $user->first_name;
-                        //     echo "<br />";
+                        
+
+                        // $result = User::find_all();
+
+
+                        // foreach ($result as $key) {
+                        //     echo $key->last_name;
                         // }
+
+                        // $photos = Photo::find_all();
+                        
+                        //  foreach ($photos as $photo) {
+                        //     echo $photo->title;
+                        // }
+
+
+                        // $user->username = "maomii";
+                        // $user->save();
 
                          ?>
 

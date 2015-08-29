@@ -86,7 +86,7 @@
                 <hr>
 
                 <!-- Preview Image -->
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                <img class="img-responsive" src="" alt="">
 
                 <hr>
 
@@ -119,7 +119,7 @@
                 <!-- Comment -->
                 <div class="media">
                     <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
+                        <img class="media-object" src="" alt="">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Start Bootstrap
@@ -132,7 +132,7 @@
                 <!-- Comment -->
                 <div class="media">
                     <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
+                        <img class="media-object" src="" alt="">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Start Bootstrap
@@ -142,7 +142,7 @@
                         <!-- Nested Comment -->
                         <div class="media">
                             <a class="pull-left" href="#">
-                                <img class="media-object" src="http://placehold.it/64x64" alt="">
+                                <img class="media-object" "" alt="">
                             </a>
                             <div class="media-body">
                                 <h4 class="media-heading">Nested Start Bootstrap

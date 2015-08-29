@@ -4,11 +4,9 @@ require_once("db_connect.php");
 
 class Database {
 
-
-
 	public $connection;
 
-		function __construct(){
+	function __construct(){
 			$this->open_db_connection();
 	}	
 
@@ -25,7 +23,7 @@ class Database {
 
 	public function query($sql){
 
-		$result = mysqli_query($this->connection, $sql);
+		$result = mysqli_query($this->connection, $sql) or die("Error: ".mysqli_error($this->connection));
 		return $result;
 
 	}
@@ -40,6 +38,12 @@ class Database {
 
 		$escape_string = mysqli_real_escape_string($this->connection, $string);
 		return $escape_string;
+
+	}
+
+	public function insert_id(){
+
+		return mysqli_insert_id($this->connection);
 
 	}
 
